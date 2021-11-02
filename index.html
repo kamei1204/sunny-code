@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="https://fontmeme.com/permalink/211027/934a52f9190e10c394a565e710f7dc8d.png" alt="bebas-neue-font" border="0"></a>
+        <!-- <a href="#" class="logo"><img src="logo.png" alt=""></a> -->
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+        </div>
+    </header>
+    <div class="banner">
+        <img src="sunny.bg.jpg" alt="サニーの写真" class="bg">
+        <div class="content">
+            <img src="https://fontmeme.com/permalink/211027/f02f3c1e68c782f432cdc970ba858501.png" alt="font-disney-logo" border="0" class="movieTitle">
+            <!-- <img src="name.png" alt="タイトル名" class="movieTitle"> -->
+            <h4>
+                <span>2021</span>
+                <span><i>4+</i></span>
+                <span>1h 55min</span>
+                <span>Animals</span>
+            </h4>
+            <p>今回も大暴れ?! フレンチブルドッグのサニー<br>今回は由布院におじゃまします。sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny 
+                sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny 
+                sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny sunny 
+            </p>
+            <div class="buttons">
+                <a href="#">play</a>
+                <a href="#">My list</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="play.png" alt="">Watch Trailer</a>
+    </div>
+
+    <div class="trailer">
+        <video src="IMG_1330.mov" controls="true"></video>
+        <img src="close.png" class="close" onclick="toggleVideo();">
+    </div>
+
+    <script>
+        function toggleVideo() {
+            const trailer = document.querySelector('.trailer')
+            const video = document.querySelector('video')
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
